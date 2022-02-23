@@ -1,0 +1,23 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm cache clean --force
+      - rm -rf node_modules
+      - rm package-lock.json
+      - npm install
+  build:
+    commands:
+      - npm start&
+  post_build:
+    commands:
+      - echo Build completed on `date`
+# Include only the files required for your application to run.
+artifacts:
+  files:
+    - server.js
+    - package-lock.json
+    - package.json
+    - db/**/*
+    - routes/**/*
