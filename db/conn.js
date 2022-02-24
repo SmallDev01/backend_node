@@ -1,6 +1,6 @@
 const { MongoClient } = require("mongodb");
 
-const Db = 'mongodb://root:Small01Dev*@18.168.65.40:27017/employees?authSource=admin&authMechanism=SCRAM-SHA-256';
+const Db = 'mongodb://root:Small01Dev*@18.168.65.40:27017/hola?authSource=admin&authMechanism=SCRAM-SHA-256';
 
 const client = new MongoClient(Db, {
     useNewUrlParser: true,
